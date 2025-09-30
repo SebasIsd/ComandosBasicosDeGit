@@ -1,14 +1,329 @@
-<html>
+<!doctype html>
+<html lang="es" data-bs-theme="auto">
   <head>
-    <title>Nosotros</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Astro v5.13.2" />
+    <title>FISEI</title>
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.3/examples/carousel/"
+    />
+    <script src="../assets/js/color-modes.js"></script>
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <meta name="theme-color" content="#712cf9" />
+    <link href="carousel.css" rel="stylesheet" />
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: #0000001a;
+        border: solid rgba(0, 0, 0, 0.15);
+        border-width: 1px 0;
+        box-shadow:
+          inset 0 0.5em 1.5em #0000001a,
+          inset 0 0.125em 0.5em #00000026;
+      }
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+      .bd-mode-toggle .bi {
+        width: 1em;
+        height: 1em;
+      }
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
   </head>
   <body>
-    <h1>NOSOTROS</h1>
-    <hr>
-    <h2>Mision</h2>
-    <p>Aqui va la Mision</p>
-    <hr>
-    <h2>Vision</h2>
-    <p>Aqui va la Vision</p>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path
+          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+        ></path>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path
+          d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"
+        ></path>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path
+          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+        ></path>
+        <path
+          d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+        ></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path
+          d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+        ></path>
+      </symbol>
+    </svg>
+    <div
+      class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle"
+    >
+      <button
+        class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        aria-label="Toggle theme (auto)"
+      >
+        <svg class="bi my-1 theme-icon-active" aria-hidden="true">
+          <use href="#circle-half"></use>
+        </svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul
+        class="dropdown-menu dropdown-menu-end shadow"
+        aria-labelledby="bd-theme-text"
+      >
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="light"
+            aria-pressed="false"
+          >
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#sun-fill"></use>
+            </svg>
+            Light
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="dark"
+            aria-pressed="false"
+          >
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#moon-stars-fill"></use>
+            </svg>
+            Dark
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center active"
+            data-bs-theme-value="auto"
+            aria-pressed="true"
+          >
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#circle-half"></use>
+            </svg>
+            Auto
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">FISEI</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+              <li class="nav-item"><a class="nav-link" href="Horarios.html">Horarios</a></li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Buscar
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        
+      <!-- Marketing messaging and featurettes
+  ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+      <div class="container marketing">
+        <!-- Three columns of text below the carousel -->
+        
+          <!-- /.col-lg-4 -->
+         
+        <!-- /.row -->
+        <!-- START THE FEATURETTES -->
+        <hr class="featurette-divider" />
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">
+          Mision            </h2>
+            <p class="lead">
+             Formar profesionales líderes competentes, con visión humanista y pensamiento crítico, a través de la Docencia, la Investigación y la Vinculación, que apliquen, promuevan y difundan el conocimiento respondiendo a las necesidades del país.
+            </p>
+          </div>
+          <div class="col-md-5">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAD1UlEQVR4AZSWTY4jRRCFv+yTuO8wrLHXSHAFt0CcAtSN4BQI1M0RQGJt7+EO9E2S9yKinFmugtHkZEa8ePGXFVWemQd2V6OZD2Ewzg41nIHWEbMVuMSqcXCR3OnWIQzG2aHkHJkyche1iQ+iMzVu2SzTtrIKbR1mopqBTv9aod+p2AcZuUWgGUZU4alxl4v1qqAge8gUxYdKJmXjd4FfFPqj9F86X+igS0iJlVxwNq4K5ZK7CCFnhRUCQlVgKWp9UNEvjSPGAL5NZTmxqpKNzcsIV4h1ybBCRGCJIiIeZbOzZmfPmKKycXfOzgcVfEWW2lBBeC78rSp/6OTO+J9DVUw6LFcfl4m7M2dFchDuclTkYaZke38l8Y3O9xr7Zwr8U3i9I4n1V90cMoTyTKzOiyynXqD9gyM6wpg/1ix/VcBP4AnUL6Vqihed+yG4wJ1wDEEWYlkH9XkOI5Ii0OYRmvmLCrxCP4Qbr24hyqqwoc7DbI4EVj2LV9Fm/h04QfsBMKYqS3MGznNN2bVb6lIPYZUxJwQOEc6D4vRk6KH4Tfgq9CK9t59FOl4q9pmGLt0nrjGNmmlFs7I7HV6VLLv7CV/ogvACVLE5Hi+/9/wGnNs5c4sVUoEcdRYyU2dDuKGPn9YxbugnM9aJ+HddzuOXjf0+oqi1vlyOulz/o550yUf5/ZRSRNN1KRxj/5MC9Cp4A550pUea/tDNQRerPTVuMsceVnPWzdHgCHh0Sw20XPRagW54EvYFjN/nQMVqN7Kxqt2uglcQKBmvuqShz+vC2yjsER+2DSKiRNUsKz+uu8rlu91lpDSP8nDzG0RuWz4ma5/j6hLtFkhdlPy42K6oF/QNqWF/DqvzDlzZ/o71GpoO2VwBsSMp0O1hplG35TIVMVTlPQ8Gv7+T7EedpmPscesy3ZeChuLtotaMl38kun0hUALQUwnV9lOcSVbF8WFatv0adIGWP7mOcvr2r8/qn09Mru4fecdjughf1Ociz3IEY6t46P8Q3ZdYfOe+oEUH0eqrxiuuoveIblonbh2YXP0pokIko8sFmKircI4bPr93hs0y6rDiKqiQb+zk64KBN8BP+lZRMlVeUjUsF7XgHDft2HKKwQtDidWogasquMFJDUKTDf0xXYVzy2kQNQy2p2K7ynGmVqSVuG9cIaUiqPBGrZ13l3DjMe5yllKlRv4FwieuqjBaz//TIKcJ+nk1T+rkx0ZrxOsdD6OqKeCju5JGRhGzaui76DrsrMY06k6sUQ1mzP2anTO+j9uz9cSDruTqP/gZVUxQ8eEE2hVznUgLcQv9FwAA//+nK0TaAAAABklEQVQDAB13+EN2H+FmAAAAAElFTkSuQmCC"  style="width:400px; height:400px;" 
+    alt="Icono representativo"/>
+
+          </div>
+        </div>
+        <hr class="featurette-divider" />
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">
+              Vision
+            </h2>
+            <p class="lead">
+La Facultad de Ingeniería en Sistemas, Electrónica e Industrial de la Universidad Técnica de Ambato, por sus niveles de excelencia, se constituirá como un centro de formación superior con liderazgo y proyección nacional e internacional.
+            </p>
+          </div>
+          <div class="col-md-5 order-md-1">
+           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAEOUlEQVR4AYyV22HjOgxEh6lE6SSuZO1K7FTibCVJJ3YnuGcASKLW+bhYggAGT1J09k2m4e3Iv0AEHNGjhTvXjA6NxF63ajzjHRkzZj3xOBSKDVfhHaP/QdU4K6iSU88KKhoTLuFewM/wDbY0f4CnUxWtokRLPeDS22j4KKLC0hl2uZkbBdAD4A5f4TuTWP9Gbzwci1krSrDvGobeZjN1KtuRuuQiN3QXpVE7W+hIjuX0w0Pc18n30F1z2nTidtDFDnjhNC5ybQ9QAKVga3QWqUcNEGLYWILIWrtmu75xJdhe2ckPprbUnpKBApdA02pnC/BeQ879Juaj4tG0UzXe7VW7p/JSrYEUg9YZtW+Jt1m6T1y1/omub1xBnSEHfqQxD/miH5My/vfNJ6fmXEA6nHhIbugHUrejiarPE+QTvsAn+B22bv5Bf1nUNEbdgK0WHxqH9Kc6oklPBWxZnI0odJP0pXrxC/Fu+AV+Qvcgtj1gclYKLZKu8LYOjUnuqcaThL9EUWi8gyNFwSHwbzaE7pL86h/IO8CiGvSE7Xh4XMgVAwlyc0StqfHwXx8n44mFhD8oBAf10PKEYcWFfd1dTz69r9onJF5F+arjOzNyk33rwTT9jsMOFQ0384ld7AYWsE9mtm32rdjvpi64xTB0+snJAZHr6h7Rf7mI1Dq/TK4hn8QF/W0+cX+qvnXfhHyNxlzMV/7UEPb4Ie7K5OQO19BEjk2zrjr7xAZKg39yITdxIZ/A7NMtOHn5Mv5VDWQ6oTuG5jbFwPFEcxxiwLItUzW2plHgSMPXKNVrXBKprWLqEeFOEH8mLQwEkM2Qqth8G4ICXtfQ1DgqMASFH9eC4ukt73TxaR5gokGfQiauMywdw0sfj7Qk3kgPZG9x5/GN01Xgs0TtJF/RCBxuftYQdkaflCdOnRA5j58OcugsnJL8ScgNBsHal2PTmk48DBJsfHijiDhlwPIzB4xqIOELNaHLuSeJOMm/e25BzrNPTcZaVV/1sJ2FLtp1g1dpPIA8OYWGpa8bObB1J/7uGAldMnajkmOcq4n+js0Y/XMiUhCOp0KHyST5fxhPfpXiTAyQV1zZjSPC7+BMrjHzwkDG4VzUHD+Rqje+sUUFDfLS8jf11anwKCHTFmOjOErkvk+VZm9PClxa30R940zOzY4nm7+X1knSk0VTE4V0pHRu8enbQy9rncR7q8Zt7GK4+fqQCu5Cacx6AsdtlOkaPkA/2E5K5+jHpaLEUs2gTsyfk15PqVfqAmT7c3nw+q6NZwJOX83hxImld4ukefilvnNdPJB09jYOs4z6O742vB2cUSnElMJ+aIy9rTkInQHkB+JTmNHjQj03sn5C93A3rX96AfQPzVA1pvIxJjjgihxesgcw+/TmG1GW9R27Tgtcx7XjQ/X/cY8yOzRR4rlJLfQrZZ2Yhv4lKguE/gMAAP//62BtbQAAAAZJREFUAwBtzzpV23XuzwAAAABJRU5ErkJggg=="
+           style="width:400px; height:400px;" 
+    alt="Icono representativo"/>
+          </div>
+        </div>
+        <hr class="featurette-divider" />
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">
+Filosofia            </h2>
+            <p class="lead">
+La filosofía de la FISEI-UTA se enfoca en formar profesionales en áreas de ingeniería competentes y con una visión humanista, que apliquen el conocimiento a través de la docencia, investigación y vinculación, promoviendo el pensamiento crítico y respondiendo a las necesidades del país. Además, se basa en principios éticos y valores universales que rigen la conducta de la comunidad universitaria, reflejando un compromiso con la excelencia académica y el desarrollo de la ciencia y la tecnología. 
+            </p>
+          </div>
+          <div class="col-md-5">
+           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAADqElEQVR4AYyUi3kbMQyDwUziUdJNkknsTOJ0knaTehP1J0jd6Ww3qT6JD4AiJF2cFz0dsaAd29ks3Ay/wVe6438Iz4bph1w7Kk77uEyqCl2tGo23M9ZxCa+1ZlU9VMO1XdMOIpaaIGe60IakZjOVLLaEj7XQQ4ae7DJOhahw7BpHb8B/cgFd8J5mHIHal3nZ0z0Sd3G271INo4JWDmdVk6JXsFMuoDN+EydmgmLn3pdOgfZI8zag2zRts0EdTFHR9CYplxhn1iLuY4rWwKF6av3v6M1dzjFa1PiNpu9QP8g2ceJXMCbV2Dm/FmbXLCw/uBTRYClaNGMDH0S/pbiR5QHUo4Wj03RDyzdOYK4uosNESnF7KUTHdeOKPOP4xuPE7vPkhvQpDyL7Mss3LuDR0ibB3kf2xpNalDiflMYDTZ3Af0m6Duk1AUn5CjdRqDKao57axITSszXduqrmDcaimk8aymf9ABfjxHpliUNwIF28rUkto4RXwpU2S5nDFLw2c6NzCvJNzaUImOM0mcMH+qS9iWibJbwSPoRNFzm+0oHvauiGpal+e9tQ3jIPdZIBlahj7+WMehgl3LxZb3A0Td6yRWMTTZJtKZai9bz1h5SHeiJGdW7qVcKdRHrzjjLLpi0qRMc79Hzek/hD4iV20aEShagZigxsMmB1vAg3AtfHvbLLooghqmxazyulaP5f3kVlXveDvd2uGQPq33EkODh8eq8rNn82OG2iYrCvRb0JRPVNxTBkI9lRLYbjKIg0Z/2Om0+gVvimxIiGb0rMjBYlrGN+0i35BPpm3aydCceHi+nxqSNLXZnBT7qt3zSfN/Fcn5j30vcm0q9mcMadX4RbrN1e4qhvupEWjaRsMvh+bbsprf/Vvbkd8BadSbK+b2rcouB12WQrSsjLVXeR08UcvrF7mNwjp5sZnzTdv+mGgy7xyNjQWJ53JLqt5aldOYn85/5s5e9Y1S3KKcexaSLzEZ4wpks4HC+NdJF0XJF5F7qbjWo0XknZFVrjYvuv2j3GPGRTd65rVtSQmzpqaqwXaOzRHW5s2o18hkHOigGEX7GMo7A676EGIlFc1nnR6jhLOEuOeGUoin07bUB1pR0Vw1nTpMdpUrVNNUr4cUP9YQ2V1/SjcuNRsbn4oMUHZwQLFvXBMmdvtdZ3XMJG2GooTVywF4Uukmo9iWNyGlXjvONR+7pG96OEYfNJ21EzWMx2REnb2Ri3cSpOuGfuohod29kUrNBfAAAA///lr1rJAAAABklEQVQDAKxMEFYAlV/nAAAAAElFTkSuQmCC"
+            style="width:400px; height:400px;" 
+    alt="Icono representativo"/>
+          </div>
+        </div>
+        <hr class="featurette-divider" />
+        <!-- /END THE FEATURETTES -->
+      </div>
+      <!-- /.container -->
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>
+          &copy; 2017–2025 Company, Inc. &middot;
+          <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
+        </p>
+      </footer>
+    </main>
+    <script
+      src="../assets/dist/js/bootstrap.bundle.min.js"
+      class="astro-vvvwv3sm"
+    ></script>
   </body>
 </html>
