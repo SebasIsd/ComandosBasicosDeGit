@@ -47,16 +47,20 @@ body {
 /* Featurettes
 ------------------------- */
 
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Añade esta línea para reducir el brillo. Puedes ajustar el valor como necesites. */
+  filter: brightness(0.5); /* Por ejemplo, 60% del brillo original */
+}
 .featurette-divider {
   margin: 5rem 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
 /* rtl:begin:remove */
-.featurette-heading {
-  letter-spacing: -.05rem;
-}
-
+/* REMOVIDO: letter-spacing: -.05rem; para evitar problemas de espaciado */
 /* rtl:end:remove */
 
 /* RESPONSIVE CSS
@@ -72,6 +76,8 @@ body {
 
   .featurette-heading {
     font-size: 50px;
+    /* OPCIONAL: Añadir color rojo de la UTA al encabezado, si es necesario */
+    /* color: var(--uta-red); */ 
   }
 }
 
@@ -79,4 +85,6 @@ body {
   .featurette-heading {
     margin-top: 7rem;
   }
+}
+
 }
